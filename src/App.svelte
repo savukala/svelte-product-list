@@ -23,7 +23,7 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-		font-family: 'Playfair Display';
+		font-family: 'Playfair Display' !important;
 	}
 
 	h1 {

@@ -68,6 +68,7 @@ button {
   font-size: 1rem;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
+  font-family: 'Playfair Display' !important;
 }
 button:hover, button:focus {
 	cursor: pointer;
@@ -94,7 +95,7 @@ button:hover, button:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  
+
 }
 </style>
 <div class="flex-container" id="filter-container">
