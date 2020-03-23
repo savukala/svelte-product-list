@@ -124,3 +124,9 @@ More in depth explanation is to be found on the respective components files.
 Products are currently listed at ./products.js as an JSON-object array.
 
 Images and other resources are under the ./public folder.
+
+# Live Demo
+
+Try out the live demo at:
+
+https://svelte-product-list.herokuapp.com/
