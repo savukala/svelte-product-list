@@ -58,6 +58,8 @@ img {
   width: auto;
 }
 button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding: 5px;
   background-color: grey;
   border: 1px solid grey;
   border-radius: 5px;
