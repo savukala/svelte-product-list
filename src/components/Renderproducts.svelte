@@ -1,6 +1,12 @@
 <script>
 import products from '../../products.js';
 
+//build new array from products.products.product_type
+let result = products.products.map(a => a.product_type);
+console.log(result);
+//Create a new SET out of the new array
+let uniqueTypes = Array.from(new Set(result));
+console.log(uniqueTypes);
 //Bring visibility to all items.
 function showAllProducts(){
   document.querySelectorAll(".card").forEach(function(el){
@@ -81,12 +87,19 @@ button:hover, button:focus {
   opacity: 0.7;
 }
 */
+#filter-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
 </style>
-<div class="flex-container">
+<div class="flex-container" id="filter-container">
 <!-- Button group from product.js product.product_type-->
-    {#each products.products as productType}
-    <button class="button" id={productType.product_type} on:click={filterProducts(productType.product_type)}>
-    {productType.product_type}
+    {#each uniqueTypes as productType}
+    <!-- If to render buttons which do not exist? -->
+
+    <button class="button" id={productType} on:click={filterProducts(productType)}>
+    {productType}
     </button>
     {/each}
     <button class="button" on:click={showAllProducts}>Näytä kaikki</button>
