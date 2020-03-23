@@ -94,6 +94,7 @@ button:hover, button:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  
 }
 </style>
 <div class="flex-container" id="filter-container">
