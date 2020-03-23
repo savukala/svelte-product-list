@@ -1,20 +1,21 @@
 <script>
 import products from '../../products.js';
 
+//init productType
+let productType;
+//Debug
+console.log(productType);
 function filterProducts(productType) {
-  if (productType == product_type) {
-    //add visibility to all card items.
+  if (productType !== 'undefined') {
+  //Debug
+  console.log("derp" + productType);
+  let selector = productType;
+  document.querySelectorAll(".card:not(selector)").forEach(function(el){
+    el.style.display = "none";
+  });
   }
-  //GLOBAL???
-  //Maybe throw productType in a store?
-  let product_type = productType;
-  /*.button
-  Add class with visibility none to an !productType items.
-  Hide all items which do not correspond to the product_type
-  let filteredProducts = document.querySelectorAll(.button);
-  if card has not the id of the button item
-  */
 }
+
 </script>
 <style>
 .render-products {
@@ -42,7 +43,20 @@ img {
   height: auto;
   width: auto;
 }
-
+button {
+  background-color: white; /* Dark */
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+button:hover, button:focus {
+	cursor: pointer;
+}
 /* If we need to add a button uncomment this.
   .card button {
   border: none;
@@ -62,14 +76,15 @@ img {
 */
 </style>
 <div class="flex-container">
-<!-- Button group from product.js product.product_type
+<!-- Button group from product.js product.product_type-->
     {#each products.products as productType}
-    <div class="button" id={productType.product_type}on:click={filterProducts(productType.product_type)}>
+    <button class="button" id={productType.product_type} on:click={filterProducts(productType.product_type)}>
     {productType.product_type}
-    </div>
--->
+    </button>
 
+    {/each}
 </div>
+
 
 
 
