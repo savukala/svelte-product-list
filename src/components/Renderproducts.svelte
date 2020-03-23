@@ -1,21 +1,28 @@
 <script>
 import products from '../../products.js';
 
-//init productType
-let productType;
-//Debug
-console.log(productType);
-function filterProducts(productType) {
-  if (productType !== 'undefined') {
-  //Debug
-  console.log("derp" + productType);
-  let selector = productType;
-  document.querySelectorAll(".card:not(selector)").forEach(function(el){
-    el.style.display = "none";
+//Bring visibility to all items.
+function showAllProducts(){
+  document.querySelectorAll(".card").forEach(function(el){
+    el.style.display = "block";
   });
+}
+//
+function filterProducts(value){
+  //Create a valid CSS selector out of the value sent from a button.
+  let selector = CSS.escape(value);
+  //Return new set of items.
+  return function() {
+    //Display all items before applying a filter.
+    //This could maybe be improved for performance?
+    showAllProducts();
+    if (value !== 'undefined') {
+    document.querySelectorAll(".card:not(#"+selector+")").forEach(function(el){
+      el.style.display = "none";
+    });
+    }
   }
 }
-
 </script>
 <style>
 .render-products {
@@ -81,8 +88,8 @@ button:hover, button:focus {
     <button class="button" id={productType.product_type} on:click={filterProducts(productType.product_type)}>
     {productType.product_type}
     </button>
-
     {/each}
+    <button class="button" on:click={showAllProducts}>Näytä kaikki</button>
 </div>
 
 
