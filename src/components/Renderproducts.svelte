@@ -1,4 +1,6 @@
 <script>
+// Import fade transition
+import { fade } from 'svelte/transition';
 // Import the products from the products.js JSON object array.
 import products from '../../products.js';
 // Build new array from products.products.product_type
@@ -100,7 +102,7 @@ button:hover, button:focus {
 
 }
 </style>
-<div class="flex-container" id="filter-container">
+<div in:fade="{{ duration: 1500 }}" class="flex-container" id="filter-container">
 <!-- Button group from uniqueTypes array-->
     {#each uniqueTypes as productType}
     <!-- Call function filterProducts with productType as an argument on user click. -->
@@ -116,14 +118,14 @@ button:hover, button:focus {
 
 
 
-<div class="flex-container">
+<div in:fade="{{ duration: 1500 }}" class="flex-container">
 
 
 
   <!-- We iterate over the products array and print them in cards -->
   {#each products.products as product}
   <!-- Create a card div for each product -->
-  <div class="card" id={product.product_type}>
+  <div out:fade class="card" id={product.product_type}>
   <!-- Find product image from the object array and give it a constant width -->
     <img src={product.image} alt={product.name} style="width:20%">
     <!-- Print out the product name -->

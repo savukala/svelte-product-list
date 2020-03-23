@@ -1,5 +1,5 @@
 <script>
-
+import { fade } from 'svelte/transition';
 </script>
 <style>
 .flex-container {
@@ -24,7 +24,7 @@
 </style>
   <header>
     <nav>
-      <div class="flex-container">
+      <div in:fade="{{ duration: 1000 }}" class="flex-container">
         <div class="nav-logo">
           <span class="nav-company-name">Best Bar</span>
           <span class="nav-company-slogan"> Our products </span>

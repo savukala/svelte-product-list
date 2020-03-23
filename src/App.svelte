@@ -4,7 +4,7 @@
 	import Renderproducts from './components/Renderproducts.svelte';
 	// import Rendercoinvalues from './components/Rendercoinvalues.svelte';
 	import Footer from './components/Footer.svelte';
-
+	
 </script>
 <svelte:head>
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
 </svelte:head>
 <main>
 <!-- Render all the necessary components in the main element -->
+
 <Renderheader />
 <Renderproducts />
 <Footer />
