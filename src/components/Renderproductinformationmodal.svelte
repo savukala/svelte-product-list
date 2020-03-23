@@ -94,7 +94,7 @@ const unsubscribeTotalPrice = totalPrice.subscribe(value => {
   <div class="modal-content"> <span class="modal-content-txt"><h2>Shopping Cart Contents</h2></span>
     <button class="close" on:click={closeModal}> &times; </button>
     <div class="modal-data">
-    <!-- Rneder the Rendershoppingcart component inside of modal-data -->
+    <!-- Rneder the Rendershoppingcart component inside of modal-data 
       <Rendershoppingcart />
       {#if total_price > 0}
       <button on:click={clearModal} class="remove-all-products">Remove all items</button>

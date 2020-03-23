@@ -1,5 +1,8 @@
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
+# Below are the instructions for running Svelte.
+## At the bottom you find the description for the program itself.
+
 ---
 
 # svelte app
@@ -92,21 +95,32 @@ npm run build
 surge public my-project.surge.sh
 ```
 # App structure and component logic
+
 The app is split into different components and they are found under src/components.
 
 In the root of src we have main.js which calls upon App.svelte and renders it into the document body.
 
 App.svelte imports all the components and renders them on the application pages.
 
+## Product-list-only?
+
+This branch is for showcasing products without checkout optionality.
+It is intended for a business to be able to show their products directly to the customer.
+
+It can run independently without a database or external servers, and is also expandable through them.
+
 ## Components
 
 Renderheader.svelte is responsible for rendering the Header element.
 
-Renderproducts.svelte is responsible for rendering the products list on the front page.
+Renderproducts.svelte is responsible for rendering the products list on the front page, and currently it also handles the products filtering, although the filtering will most likely be split to it's own component in the future.
+
+Footer.svelte is responsible for rendering the site Footer.
+
+Productfilter.svelte, Rendercoinvalues.svelte, Renderproductinformation.svelte and Renderproductinformationmodal.svelte are currently not used, but under development.
 
 More in depth explanation is to be found on the respective components files.
 
-## Product-list-only?
-This branch is for showcasing products without checkout optionality.
+Products are currently listed at ./products.js as an JSON-object array.
 
-Products are currently listed at ./products.js
+Images and other resources are under the ./public folder.
