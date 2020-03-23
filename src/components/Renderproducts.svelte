@@ -58,18 +58,20 @@ img {
   width: auto;
 }
 button {
-  background-color: white; /* Dark */
-  border: 1px solid black;
-  color: black;
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1rem;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 button:hover, button:focus {
 	cursor: pointer;
+  background-color: black;
 }
 /* If we need to add a button uncomment this.
   .card button {
