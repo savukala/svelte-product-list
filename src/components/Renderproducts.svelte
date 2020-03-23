@@ -1,29 +1,30 @@
 <script>
+// Import the products from the products.js JSON object array.
 import products from '../../products.js';
-
-//build new array from products.products.product_type
+// Build new array from products.products.product_type
 let result = products.products.map(a => a.product_type);
-console.log(result);
-//Create a new SET out of the new array
+// Create a new SET out of the new array
 let uniqueTypes = Array.from(new Set(result));
-console.log(uniqueTypes);
-//Bring visibility to all items.
+// Bring visibility to all items.
 function showAllProducts(){
   document.querySelectorAll(".card").forEach(function(el){
     el.style.display = "block";
   });
 }
-//
+// Function filterProducts gets fired when user clicks a button in the filter-container.
 function filterProducts(value){
-  //Create a valid CSS selector out of the value sent from a button.
+  // Create a valid CSS selector out of the value sent from a button.
   let selector = CSS.escape(value);
-  //Return new set of items.
+  // Return new set of items.
   return function() {
-    //Display all items before applying a filter.
-    //This could maybe be improved for performance?
+    // Display all items before applying a filter.
+    // This could maybe be improved for performance?
     showAllProducts();
+    // Only perform operation if button sent argument.
     if (value !== 'undefined') {
+      // Get all card elements which do NOT match the value passed by the button.
     document.querySelectorAll(".card:not(#"+selector+")").forEach(function(el){
+      // Hide all cards which do NOT match the value passed by the button.
       el.style.display = "none";
     });
     }
@@ -94,14 +95,15 @@ button:hover, button:focus {
 }
 </style>
 <div class="flex-container" id="filter-container">
-<!-- Button group from product.js product.product_type-->
+<!-- Button group from uniqueTypes array-->
     {#each uniqueTypes as productType}
-    <!-- If to render buttons which do not exist? -->
-
+    <!-- Call function filterProducts with productType as an argument on user click. -->
     <button class="button" id={productType} on:click={filterProducts(productType)}>
+    <!-- Text inside the button -->
     {productType}
     </button>
     {/each}
+    <!-- Add button to bring all items back onto the view. -->
     <button class="button" on:click={showAllProducts}>Näytä kaikki</button>
 </div>
 
@@ -114,13 +116,19 @@ button:hover, button:focus {
 
   <!-- We iterate over the products array and print them in cards -->
   {#each products.products as product}
-  <!-- {#if } -->
+  <!-- Create a card div for each product -->
   <div class="card" id={product.product_type}>
+  <!-- Find product image from the object array and give it a constant width -->
     <img src={product.image} alt={product.name} style="width:20%">
+    <!-- Print out the product name -->
     <h1>{product.name}</h1>
+    <!-- Print out the product volume and price -->
     <p class="price">{product.volume} - {product.price} €</p>
+    <!-- Print out the product type -->
     <p class="price">{product.type} </p>
+    <!-- Print out the product discount -->
     <p class="price">{product.discount} </p>
+    <!-- Print out the  product description inline style should be thrown inside styles. -->
     <p  style="margin: 5px;">{product.description}</p>
   </div>
   {/each}
