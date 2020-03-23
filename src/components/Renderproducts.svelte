@@ -1,19 +1,33 @@
 <script>
 import products from '../../products.js';
 
-function filterProducts(productType) {
-  if (productType == product_type) {
-    //add visibility to all card items.
+//build new array from products.products.product_type
+let result = products.products.map(a => a.product_type);
+console.log(result);
+//Create a new SET out of the new array
+let uniqueTypes = Array.from(new Set(result));
+console.log(uniqueTypes);
+//Bring visibility to all items.
+function showAllProducts(){
+  document.querySelectorAll(".card").forEach(function(el){
+    el.style.display = "block";
+  });
+}
+//
+function filterProducts(value){
+  //Create a valid CSS selector out of the value sent from a button.
+  let selector = CSS.escape(value);
+  //Return new set of items.
+  return function() {
+    //Display all items before applying a filter.
+    //This could maybe be improved for performance?
+    showAllProducts();
+    if (value !== 'undefined') {
+    document.querySelectorAll(".card:not(#"+selector+")").forEach(function(el){
+      el.style.display = "none";
+    });
+    }
   }
-  //GLOBAL???
-  //Maybe throw productType in a store?
-  let product_type = productType;
-  /*.button
-  Add class with visibility none to an !productType items.
-  Hide all items which do not correspond to the product_type
-  let filteredProducts = document.querySelectorAll(.button);
-  if card has not the id of the button item
-  */
 }
 </script>
 <style>
@@ -42,7 +56,20 @@ img {
   height: auto;
   width: auto;
 }
-
+button {
+  background-color: white; /* Dark */
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+button:hover, button:focus {
+	cursor: pointer;
+}
 /* If we need to add a button uncomment this.
   .card button {
   border: none;
@@ -60,16 +87,24 @@ img {
   opacity: 0.7;
 }
 */
+#filter-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
 </style>
-<div class="flex-container">
-<!-- Button group from product.js product.product_type
-    {#each products.products as productType}
-    <div class="button" id={productType.product_type}on:click={filterProducts(productType.product_type)}>
-    {productType.product_type}
-    </div>
--->
+<div class="flex-container" id="filter-container">
+<!-- Button group from product.js product.product_type-->
+    {#each uniqueTypes as productType}
+    <!-- If to render buttons which do not exist? -->
 
+    <button class="button" id={productType} on:click={filterProducts(productType)}>
+    {productType}
+    </button>
+    {/each}
+    <button class="button" on:click={showAllProducts}>Näytä kaikki</button>
 </div>
+
 
 
 
