@@ -25,7 +25,7 @@ module.exports = {
       "discount": " ",
       "product_type" : "Siideri",
       "quantity": 0,
-      "image":"item1.PNG"
+      "image":"item1.png"
     },
     {
       "id": 2,
@@ -37,7 +37,7 @@ module.exports = {
       "discount": " ",
       "product_type" : "Lonkero",
       "quantity": 0,
-      "image":"item2.PNG"
+      "image":"item2.png"
     },
     {
       "id": 3,
@@ -49,7 +49,7 @@ module.exports = {
       "discount": " ",
       "type": "Hanatuote",
       "quantity": 0,
-      "image":"item3.PNG"
+      "image":"item3.png"
     },
     {
       "id": 4,
@@ -61,7 +61,7 @@ module.exports = {
       "product_type" : "Olut",
       "type": "Pullo",
       "quantity": 0,
-      "image":"item4.PNG"
+      "image":"item4.png"
     },
     {
       "id": 5,
@@ -73,7 +73,7 @@ module.exports = {
       "product_type" : "Siideri",
       "type": "Tölkki",
       "quantity": 0,
-      "image":"item5.JPG"
+      "image":"item5.jpg"
     },
     {
       "id": 6,
@@ -85,7 +85,7 @@ module.exports = {
       "product_type" : "Gin",
       "type": "",
       "quantity": 0,
-      "image":"item6.JPG"
+      "image":"item6.jpg"
     },
     {
       "id": 7,
@@ -97,7 +97,7 @@ module.exports = {
       "product_type" : "Gin",
       "type": "",
       "quantity": 0,
-      "image":"item7.JPG"
+      "image":"item7.jpg"
     },
     {
       "id": 8,
@@ -109,7 +109,7 @@ module.exports = {
       "product_type" : "Gin",
       "type": "",
       "quantity": 0,
-      "image":"item8.JPG"
+      "image":"item8.jpg"
     },
     {
       "id": 9,
@@ -121,7 +121,7 @@ module.exports = {
       "product_type" : "Gin",
       "type": "",
       "quantity": 0,
-      "image":"item9.JPG"
+      "image":"item9.jpg"
     },
     {
       "id": 10,
@@ -133,7 +133,7 @@ module.exports = {
       "product_type" : "Gin",
       "type": "",
       "quantity": 0,
-      "image":"item10.JPG"
+      "image":"item10.jpg"
     },
     {
       "id": 11,
@@ -145,7 +145,7 @@ module.exports = {
       "product_type" : "Vodka",
       "type": "",
       "quantity": 0,
-      "image":"item11.JPG"
+      "image":"item11.jpg"
     },
     {
       "id": 12,
@@ -157,7 +157,7 @@ module.exports = {
       "product_type" : "Vodka",
       "type": "",
       "quantity": 0,
-      "image":"item12.PNG"
+      "image":"item12.png"
     },
     {
       "id": 13,
@@ -169,7 +169,7 @@ module.exports = {
       "product_type" : "Maustetut viinat",
       "type": "",
       "quantity": 0,
-      "image":"item13.PNG"
+      "image":"item13.png"
     },
     {
       "id": 14,
@@ -181,7 +181,7 @@ module.exports = {
       "product_type" : "Maustetut viinat",
       "type": "",
       "quantity": 0,
-      "image":"item14.JPG"
+      "image":"item14.jpg"
     },
     {
       "id": 15,
@@ -193,7 +193,7 @@ module.exports = {
       "product_type" : "Liköörit & Katkerot",
       "type": "",
       "quantity": 0,
-      "image":"item15.JPG"
+      "image":"item15.jpg"
     },
     {
       "id": 16,
@@ -205,7 +205,7 @@ module.exports = {
       "product_type" : "Liköörit & Katkerot",
       "type": "",
       "quantity": 0,
-      "image":"item16.JPG"
+      "image":"item16.jpg"
     },
     {
       "id": 17,
@@ -217,7 +217,7 @@ module.exports = {
       "product_type" : "Liköörit & Katkerot",
       "type": "",
       "quantity": 0,
-      "image":"item17.JPG"
+      "image":"item17.jpg"
     },{
       "id": 18,
       "name": "Disaronno",
@@ -228,7 +228,7 @@ module.exports = {
       "product_type" : "Liköörit & Katkerot",
       "type": "",
       "quantity": 0,
-      "image":"item18.JPG"
+      "image":"item18.jpg"
     },
 
 
