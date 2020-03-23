@@ -13,7 +13,7 @@ module.exports = {
       "discount": " ",
       "product_type" : "Olut",
       "quantity": 0,
-      "image":"item0.PNG"
+      "image":"item0.png"
     },
     {
       "id": 1,
