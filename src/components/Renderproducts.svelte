@@ -34,6 +34,7 @@ function filterProducts(value){
 }
 </script>
 <style>
+
 .render-products {
   padding: 10px;
 }
@@ -49,6 +50,7 @@ function filterProducts(value){
   margin: auto;
   margin-bottom: 1em;
   text-align: center;
+  padding: 0.8em;
 }
 
 .price {
@@ -125,7 +127,7 @@ button:hover, button:focus {
   <!-- We iterate over the products array and print them in cards -->
   {#each products.products as product}
   <!-- Create a card div for each product -->
-  <div out:fade class="card" id={product.product_type}>
+  <div out:fade="{{ duration: 1500 }}" class="card" id={product.product_type}>
   <!-- Find product image from the object array and give it a constant width -->
     <img src={product.image} alt={product.name} style="width:20%">
     <!-- Print out the product name -->
