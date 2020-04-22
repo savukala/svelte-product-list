@@ -3,6 +3,10 @@
 # Below are the instructions for running Svelte.
 ## At the bottom you find the description for the program itself.
 
+Live demos based on this project at:
+https://svelte-product-list.herokuapp.com/ 
+https://jyppebonus.com/
+
 ---
 
 # svelte app
